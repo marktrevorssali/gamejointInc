@@ -1,0 +1,637 @@
+*{
+    box-sizing: border-box;
+    font-family: Montserrat_Alternates;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: Montserrat_Alternates;
+    src: url(fonts/MontserratAlternates-Medium.ttf);
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding-top: 70px;
+}
+
+/* NAV BAR */
+
+
+.logo a{
+    text-decoration: none;
+    color: rgb(40, 39, 39);
+    font-size: 15px;
+    padding-left: 5px;
+
+}
+
+.game-joint-logo{
+    width: 90px;
+    height: auto;
+    border-radius: 0px;
+}
+
+.game-joint-logo:hover{
+    scale: 1.05;
+    transition: 1s;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    align-items: right;
+}
+
+ul li{
+    /* padding-left: 20px; */
+    /* justify-content: space-evenly; */
+    font-size: 15px;
+}
+
+li{
+    all: unset;
+    /* background-color: rgb(186, 190, 195); */
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(69, 68, 67);
+    margin:1rem;
+    padding: 0.5rem;
+    transition: 1s;
+    display: block;
+}
+
+li:hover{
+   cursor: pointer;
+   scale: 1.11; 
+   transition: 1s;
+   color: rgb(83, 142, 200);
+}
+
+.nav-bar{
+    top: 0;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    z-index: 10000;
+    box-sizing: border-box;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline
+}
+
+.nav-links ul li a{
+    all: unset;
+}
+
+.nav-links ul li .active{
+    color: rgb(54, 145, 115);
+}
+
+.toggle-button{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+}
+
+.toggle-button span{
+    height: 3px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+/* BODY */
+
+.main{
+    flex-grow: 1;
+    padding: 20px;
+    background-color: rgba(51, 51, 68, 0.368);
+    margin: 0.5em;
+    border-radius: 10px;
+    /* position: relative; */
+}
+
+
+.pre-hero{
+    padding-top: 5%;
+    text-align: center;
+    background-image: url(images/2.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.pre-hero-text{
+    font-size: 50px;
+    padding: 40px;
+    color: rgb(255, 255, 255);
+    /* transition: 5s; */
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    text-align: start;
+    justify-content: center;
+}
+
+.search-bar input{
+    all: unset;
+    background-color: rgb(255, 255, 255);
+    padding: 0.5em;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    width: 30em;
+    transition-duration: 0.5s;
+}
+
+.search-bar input:hover{
+    cursor: pointer;
+    transition-duration: 0.5s;
+    width: 40em;
+}
+
+.search-bar::placeholder{
+    display: flex;
+    text-align: left;
+}
+
+.btn-search{
+    all: unset;
+    background-color: rgb(90, 135, 189);
+    color: white;
+    padding: 0.5em;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    transition-duration: 0.2s;
+}
+
+.btn-search:hover{
+    cursor: pointer;
+    transition-duration: 0.1s;
+    
+}
+
+
+footer{
+    width: 100%;
+    height: auto;
+    background: url(images/astro-bot-rescue-mission-wallpaper-06-en-us-06jul20.png);
+
+}
+
+.footer{
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.copyright{
+    text-align: center;
+    color: white;
+}
+
+.block{
+    color: white;
+}
+
+.block ul li a{
+    all: unset;
+    text-align: left;
+    color: rgb(131, 233, 247);
+    text-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;;
+}
+
+.container-1{
+    padding: 1em;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+img{
+    align-items: center;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+.item-card{
+    display: block;
+     background-color: rgba(50, 50, 50, 0.137);
+     border-radius: 5px;
+     text-align: center;
+     transition: 1s;
+
+}
+
+.item-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    scale: 1.01;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.description-text{
+    text-align: left;
+    padding: 5px;
+    margin: 10px;
+}
+
+.marketing-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 2rem;
+    margin: 1.5em;
+    
+}
+
+
+.items-preview-1{
+    width: 600px;
+}
+
+.img{
+    width: 100%;
+}
+
+/* STYLE FOR SERVICES */
+.services{
+    margin-top: 0;
+    background-image: url(images/poster-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.services-title{
+    /* display: block; */
+    text-align: center;
+    color: white;
+    font-size: 70px;    
+    
+}
+
+.minor-head{
+    font-size: 30px;
+    color: rgb(253, 253, 253);
+}
+
+.visual-descriptive-1{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: image 2s linear forwards;
+}
+
+.descriptive{
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;
+    color: rgb(255, 253, 253);
+    background-color: rgba(0, 0, 0, 0.529);
+    border-radius: 10px;
+}
+
+.visual-descriptive-2{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: image 2s linear forwards;
+}
+
+.visual-descriptive-3{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: image 2s linear forwards;
+}
+
+/* CONTACT DETAILS */
+
+.contact{
+    padding: 2em;
+    background-color: rgba(51, 51, 68, 0.204);
+    margin: 2em;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact form{
+   display: flex;
+   flex-direction: column;
+   text-align: start;
+}
+
+
+input{
+    all: unset;
+    font-size: 0.8em;
+    border: rgb(49, 113, 143) solid 2px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    padding: 0.85em;
+    width: 50em;
+}
+
+input:hover{
+    scale: 1.02;
+    transition-duration: 0.4s;
+}
+
+
+button[type='submit']{
+    all: unset;
+    font-size: 0.8em;
+    display: flex;
+    padding: 0.4em;
+    text-align: start;
+    width: 5em;
+    border: rgb(49, 113, 143) solid 2px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+
+.submit-btn:hover{
+    cursor: pointer;
+    scale: 1.02;
+    transition-duration: 0.4s;
+
+}
+
+.place-order{
+    all: unset;
+    font-size: 0.8em;
+    border: rgb(49, 113, 143) solid 2px;
+    border-radius: 5px;
+    padding: 0.4em;
+    transition-duration: 0.4s;
+}
+
+@keyframes image {
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px){
+    body{
+        padding-top: 50px;
+    }
+
+    .toggle-button{
+        display: flex;
+
+    }
+
+    .nav-links{
+        display: none;
+        width: 100%;
+    }
+
+    .nav-bar{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .nav-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-links li{
+        text-align: center;
+    }
+
+    .nav-links.active{
+        display: block;
+    }
+
+    .logo{
+        display: flex;
+    }
+
+    .game-joint-logo{
+    width: 70px;
+    height: auto;
+    border-radius: 0px;
+    padding: 5px;
+}
+
+/* slider */
+
+.slider {
+      height: 20em;
+      overflow: hidden;
+      margin: 0 auto;
+      position: relative;
+    }
+
+.pre-hero{
+    padding-top: 1px;
+    text-align: center;
+    background-image: url(images/2.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.pre-hero-text{
+    font-size: 30px;
+    padding: 10px;
+
+}
+
+.search-bar{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.search-bar input{
+    all: unset;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    transition-duration: 0.2s;
+    padding: 0.5em;
+    width: 30em;
+}
+
+.search-bar input:hover{
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.search-bar::placeholder{
+    display: flex;
+    text-align: left;
+}
+
+.footer{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 40px 20px;
+    
+}
+
+.footer-links{
+    display: block;
+    text-align: center;
+}
+
+.footer-links:hover{
+    cursor: pointer;
+    transition-duration: 3s;
+}
+
+.container-1{
+    padding: 1em;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.0em;
+    justify-content: center;
+
+}
+
+img{
+    display: block;
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    padding: 5px;
+}
+.item-card{
+    display: flex;
+    background-color: rgba(74, 74, 74, 0.195);
+    border-radius: 5px;
+    text-align: left;
+    width: 100%;
+
+}
+
+.description-text{
+    text-align: left;
+}
+
+.items-preview-1{
+    width: 300px;
+}
+
+.marketing-1{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+/* SERVICES PAGE */
+.services{
+    margin-top: 0;
+    padding-top: 0;
+    text-align: start;
+    background-image: url(images/poster-1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.services-title{
+    font-size: 50px;
+}
+
+.visual-service{
+    height: auto;
+}
+
+.descriptive{
+    padding: 20px;
+    margin: 10px;
+    font-size: 15px;
+    color: rgb(255, 253, 253);
+}
+
+/* instant-shop */
+
+    .product{
+        border: 1px solid #ccc; 
+        padding: 5px;
+        background-color: rgba(50, 50, 50, 0.137);
+        border: rgb(49, 113, 143) solid 2px;
+        border-radius: 5px;
+        width: 250px; 
+        text-align: start;
+        transition: 1s;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .marketing-1{
+    display: block;
+    font-size: 1rem;
+}
+
+.search-bar{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    transition: 0.5s;
+}
+
+.search-bar input{
+    all: unset;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    transition-duration: 0.2s;
+    padding: 0.5em;
+    width: 19em;
+}
+
+input{
+    width: auto;
+}
+
+
+}
