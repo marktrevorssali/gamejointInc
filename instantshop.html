@@ -44,7 +44,7 @@
         border: 1px solid #ccc; 
         padding: 5px;
         background-color: rgba(50, 50, 50, 0.137);
-        border: rgb(49, 113, 143) solid 2px;
+        /* border: rgb(49, 113, 143) solid 2px; */
         border-radius: 5px;
         width: 300px; 
         text-align: start;
@@ -103,6 +103,10 @@
       padding: 10px 15px;
       border-radius: 5px;
       font-size: 3.5rem;
+    }
+
+    .search-bar input{
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     }
 
     @keyframes slideAnimation {
@@ -192,8 +196,15 @@
   </div>
 
     <!-- Products-available-Ons-Sale -->
+    <h1 class="our-products">Our Products</h1>
+    
+    <!-- search-bar -->
+    <div class="search-bar">
+    <input type="search" id="searchInput" placeholder="Search...">
+    <button class="btn-search" id="searchBtn">Search</button>
+    <div id="searchResults" class="results-box"></div>
+    </div>
 
-     <h1 class="our-products">Our Products</h1>
   <div class="product-list" id="productList">
   </div>
 

@@ -21,6 +21,7 @@
       overflow: hidden;
       margin: 0 auto;
       position: relative;
+      margin-top: 0;
     }
 
     .slides {
@@ -53,6 +54,7 @@
       font-size: 3.5rem;
     }
 
+
     @keyframes slideAnimation {
       0%   { transform: translateX(0%); }
       33%  { transform: translateX(0%); }
@@ -68,7 +70,7 @@
 
     @media (max-width: 760px) {
     .product{
-      display: flex;
+         display: flex;
         background-color: rgba(74, 74, 74, 0.195);
         border-radius: 5px;
         text-align: left;
@@ -88,7 +90,7 @@
     .slider {
       height: 15em;
       overflow: hidden;
-      margin: 50px auto;
+      margin: 0px auto;
       position: relative;
     }
 
@@ -126,9 +128,9 @@
     <main>
         <div class="pre-hero">
                 <div class="search-bar">
-                        <input type="search" placeholder="Search...">
-                        <button class="btn-search">Search</button>
-                    </form>
+                        <input type="search" id="searchInput" placeholder="Search...">
+                        <button class="btn-search" id="searchBtn">Search</button>
+                        <div id="searchResults" class="results-box"></div>
                 </div>
                     <div class="pre-hero-text"><p class="pht">
                         Welcome To The Top Game And Accessory shop 
@@ -177,9 +179,8 @@
       </div>
     </div>
     </div>
-
-                    <div class="product-list" id="productList">
-                    </div>
+            <div class="product-list" id="productList">
+                </div>
                     
                     </div>
 
