@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png">
+
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="services.html">
+    <link rel="stylesheet" href="contact.html">
+    <link rel="stylesheet" href="instantshop.html">
+    <link rel="stylesheet" href="style.css">
+
+  <title>Product Details</title>
+  <style>
+    img { 
+        max-width: 300px;
+    }
+    
+    .product-details { 
+        max-width: 600px; 
+        margin: auto; 
+    }
+  </style>
+</head>
+<body>
+  <div class="product-details" id="productDetails"></div>
+
+  <script src="products.js"></script>
+  <script>
+
+    // Get ID from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = parseInt(urlParams.get('id'));
+
+    // Find product
+    const product = products.find(p => p.id === productId);
+
+    if (product) {
+      const container = document.getElementById('productDetails');
+      container.innerHTML = `
+        <h2>${product.name}</h2>
+        <img src="${product.image}" alt="${product.name}">
+        <p>Price: ${product.price}</p>
+        <p>Description: This is a great product. You can add more details here!</p>
+
+        <form action="https://formsubmit.co/gamejoint6@gmail.com" method="POST">
+          <input type="hidden" name="Product" value="${product.name}">
+          <input type="hidden" name="Price" value="${product.price}">
+          
+          <label>Full Name:</label><br>
+          <input type="text" name="Full Name" required><br>
+          
+          <label>Email Address:</label><br>
+          <input type="email" name="Email" required><br>
+          
+          <label>Order Notes:</label><br>
+          <textarea name="Message" rows="4" required></textarea><br>
+          
+          <button type="submit">Submit Order</button>
+        </form>
+      `;
+    } else {
+      document.getElementById('productDetails').innerText = "Product not found.";
+    }
+  </script>
+</body>
+</html>
