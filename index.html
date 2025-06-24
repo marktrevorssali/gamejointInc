@@ -10,6 +10,96 @@
     <link rel="stylesheet" href="contact.html">
     <link rel="stylesheet" href="instantshop.html">
     <link rel="stylesheet" href="style.css">
+
+<style>
+     a{
+      all: unset;
+     }
+
+     .slider {
+      height: 30em;
+      overflow: hidden;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      /* position: absolute; */
+      /* width: 300%; */
+      height: 100%;
+      animation: slideAnimation 9s infinite;
+    }
+
+    .slide {
+      position: relative;
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 3.5rem;
+    }
+
+    @keyframes slideAnimation {
+      0%   { transform: translateX(0%); }
+      33%  { transform: translateX(0%); }
+
+      36%  { transform: translateX(-100%); }
+      66%  { transform: translateX(-100%); }
+
+      69%  { transform: translateX(-200%); }
+      99%  { transform: translateX(-200%); }
+
+      100% { transform: translateX(0%); }
+    }
+
+    @media (max-width: 760px) {
+    .product{
+      display: flex;
+        background-color: rgba(74, 74, 74, 0.195);
+        border-radius: 5px;
+        text-align: left;
+        width: 80%;
+        flex-wrap: wrap;
+        align-items: start;
+        height: auto;
+    } 
+
+     .product img { 
+        align-items: center;
+        width: 100%;
+        height: auto;
+        border-radius: 10px; 
+    }
+
+    .slider {
+      height: 15em;
+      overflow: hidden;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    .caption{
+      font-size: 1.5rem;
+
+    }
+}
+
+</style>
+
 </head>
 
         <nav class="nav-bar">
@@ -40,12 +130,12 @@
                         <button class="btn-search">Search</button>
                     </form>
                 </div>
-                    <div class="pre-hero-text"><p class="pht">Welcome To The Top Game And Accessory shop 
+                    <div class="pre-hero-text"><p class="pht">
+                        Welcome To The Top Game And Accessory shop 
                         on The Globe. Please feel at home!</p></div>
                 </div>
                 <div class="hero">
-                    <!-- ITEMS ON SALE -->
-                    <div class="container-1">
+                    <!-- <div class="container-1">
                     <div class="item-card"><img src="images/ps5-controller.webp" alt="">
                         <div class="description-text">PlayStation 5 Controller $45</div>
                     </div>
@@ -69,7 +159,28 @@
                     </div>
                     <div class="item-card"><img src="images/retro-disk.jpg" alt="">
                         <div class="description-text">Retro Disk Gaming Console <br>Retrodisk Emulator <br>Retro Disk Portable Hdd ($75)</div>
+                    </div> -->
+                    
+    <div class="slider">
+    <div class="slides">
+      <div class="slide">
+        <img src="images/cod-1.jpg" alt="Slide 1">
+        <div class="caption">Call of Duty: Action Packed</div>
+      </div>
+      <div class="slide">
+        <img src="images/spidey-1.jpg" alt="Slide 2">
+          <div class="caption">Spiderman: Web Sling</div>
+      </div>
+      <div class="slide">
+        <img src="images/borderland-4.jpg" alt="Slide 3">
+          <div class="caption">BORDERLANDS 4</div>
+      </div>
+    </div>
+    </div>
+
+                    <div class="product-list" id="productList">
                     </div>
+                    
                     </div>
 
                     <div class="marketing">
@@ -119,5 +230,7 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="products.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

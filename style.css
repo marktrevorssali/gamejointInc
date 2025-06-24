@@ -233,25 +233,63 @@ footer{
 
 }
 
-img{
+/* img{
     align-items: center;
     width: 300px;
     height: auto;
     border-radius: 10px;
     padding: 10px;
-}
-.item-card{
-    display: block;
+} */
+/* .item-card{
+     display: block;
      background-color: rgba(50, 50, 50, 0.137);
      border-radius: 5px;
      text-align: center;
      transition: 1s;
 
+} */
+
+.product-list{
+  padding: 1em;
+  margin: 0.5em;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  gap: 0.5em;
+  justify-content: center;
+  border-radius: 10px;
+  border-left: rgb(49, 113, 143) solid 2px;
+  border-right: rgb(49, 113, 143) solid 2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.item-card:hover{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    scale: 1.01;
-    transition: 1s;
+
+.product-list:hover{
+    cursor: pointer;
+}
+
+.on-display{
+    width: 100%;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1px;
+        
+}
+
+.product{
+    background-color: rgba(50, 50, 50, 0.137);
+    border-radius: 5px;
+    width: 100%;
+    padding: 0.5em;
+    text-align: left;
+    border: rgb(49, 113, 143) solid 2px;
+    transition: 0.5s; 
+}
+
+.product:hover{
+    display: block;
+    box-shadow: #00000059 0px 5px 15px;    scale: 1.01;
+    transition: 0.5s;
     cursor: pointer;
 }
 
@@ -398,6 +436,15 @@ button[type='submit']{
     border-radius: 5px;
     padding: 0.4em;
     transition-duration: 0.4s;
+}
+
+.detail-btn{
+    all: unset;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #9bd3f6;
 }
 
 @keyframes image {
@@ -584,8 +631,8 @@ img{
 }
 
 .descriptive{
-    padding: 20px;
-    margin: 10px;
+    padding: 10px;
+    margin: 8px;
     font-size: 15px;
     color: rgb(255, 253, 253);
 }

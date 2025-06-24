@@ -20,11 +20,53 @@
     .product-details { 
         max-width: 600px; 
         margin: auto; 
+        margin-top: 2em;
+        margin-bottom: 0.5em;
     }
+
   </style>
+
+<nav class="nav-bar">
+             <div class="logo"><a href="index.html">
+                <img src="images/logo.png" alt="" class="game-joint-logo">
+                </a>
+            </div>
+            <!-- toggle-button -->
+    <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="instantshop.html"  class="active">Instant Shop</a></li>
+                </ul>
+            </div>
+        </nav>
+
 </head>
 <body>
   <div class="product-details" id="productDetails"></div>
+
+     <footer>
+        <div class="footer">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block">
+                For More inquiries you can checkout our socials below
+                <ul class="footer-links">
+                    <li><a href="#">WhatsApp</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">Gmail</a></li>
+                </ul>
+            </div>
+            <div class="copyright">All Right Reserved @Game Joint Inc. 2025</div>
+        </div>
+    </footer>
 
   <script src="products.js"></script>
   <script>
@@ -42,27 +84,35 @@
         <h2>${product.name}</h2>
         <img src="${product.image}" alt="${product.name}">
         <p>Price: ${product.price}</p>
-        <p>Description: This is a great product. You can add more details here!</p>
+        <p>Description: ${product.description}</p>
 
         <form action="https://formsubmit.co/gamejoint6@gmail.com" method="POST">
+
           <input type="hidden" name="Product" value="${product.name}">
           <input type="hidden" name="Price" value="${product.price}">
-          
+          <br>
           <label>Full Name:</label><br>
           <input type="text" name="Full Name" required><br>
-          
+          <br>
           <label>Email Address:</label><br>
           <input type="email" name="Email" required><br>
-          
+          <br>
+          <label for="contact">Phone contact:</label><br>
+          <input type="tel" placeholder="Phone Number"><br>
+          <br>
           <label>Order Notes:</label><br>
-          <textarea name="Message" rows="4" required></textarea><br>
-          
-          <button type="submit">Submit Order</button>
+          <textarea name="Message" rows="4" required class="place-order"></textarea><br>
+          <br>
+          <button type="submit" class="submit-btn">Submit Order</button>
         </form>
       `;
-    } else {
+    } 
+    
+    else {
       document.getElementById('productDetails').innerText = "Product not found.";
     }
   </script>
+    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
