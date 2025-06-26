@@ -716,5 +716,21 @@ input{
     height: auto;
 }
 
+    .product{
+        border: 1px solid #ccc; 
+        padding: 5px;
+        background-color: rgba(50, 50, 50, 0.137);
+        border-radius: 5px;
+        width: 100px;
+        text-align: start;
+        font-size: 10px;
+        transition: 1s;
+    }
+
+    .product-list{
+        padding: 0;
+        margin: 0;
+    }
+
 
 }
