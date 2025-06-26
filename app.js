@@ -3,13 +3,13 @@ const productList = document.getElementById("productList");
 function renderProducts(productArray) {
   productList.innerHTML = "";
 
-productArray.forEach(product => {
+  productArray.forEach(product => {
   const div = document.createElement("div");
   div.className = "product";
   div.innerHTML = `
     <a href="product.html?id=${product.id}">
     <img src="${product.image}" alt="${product.name}" class="on-display">
-    <h3>${product.name}</h3>
+    <h4>${product.name}</h4>
     <p>Price: ${product.price}</p>
     <button class = "detail-btn">View Details</button>
   `;
@@ -34,7 +34,7 @@ document.getElementById("searchInput").addEventListener("input", function () {
   renderProducts(filteredProducts);
 });
 
-// ⬇️ This assumes you already have a `products` array loaded from products.js
+// This assumes you already have a `products` array loaded from products.js
 
 function renderProducts(productArray) {
   productList.innerHTML = ""; // Clear existing products
@@ -45,7 +45,7 @@ function renderProducts(productArray) {
     div.innerHTML = `
       <a href="product.html?id=${product.id}">
         <img src="${product.image}" alt="${product.name}" class="on-display">
-        <h3>${product.name}</h3>
+        <h4>${product.name}</h4>
         <p>Price: ${product.price}</p>
         <button class="detail-btn">View Details</button>
       </a>
@@ -54,10 +54,10 @@ function renderProducts(productArray) {
   });
 }
 
-// 🔁 Load all products initially
+// Load all products initially
 renderProducts(products);
 
-// 🔎 Search function for mini dropdown menu
+// Search function for mini dropdown menu
 function searchProducts() {
   const keyword = searchInput.value.toLowerCase();
   const filtered = products.filter(product =>
@@ -67,7 +67,8 @@ function searchProducts() {
   searchResults.innerHTML = ""; // Clear previous results
 
   if (filtered.length === 0 || keyword === "") {
-    searchResults.style.display = "none";
+    searchResults.innerHTML = "<div class = 'result-item'No results found!</div>"
+    searchResults.style.display = "block";
     return;
   }
 
@@ -87,7 +88,14 @@ function searchProducts() {
 
 // Trigger on typing or clicking search
 searchInput.addEventListener("input", searchProducts);
-searchBtn.addEventListener("click", searchProducts);
+
+searchBtn.addEventListener("click", function () {
+  searchProducts(); // Run the search logic
+
+  // Hide the dropdown after clicking the button
+  searchResults.style.display = "none";
+});
+
 
 //Optional: Hide search results when clicking outside
 document.addEventListener("click", function (e) {

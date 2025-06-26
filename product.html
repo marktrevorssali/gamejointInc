@@ -13,8 +13,9 @@
 
   <title>Product Details</title>
   <style>
+
     img { 
-        max-width: 300px;
+        max-width: 100%;
     }
     
     .product-details { 
@@ -24,11 +25,65 @@
         margin-bottom: 0.5em;
     }
 
+    .product-details img{
+      width: 15em;
+    }
+
+  .gallery {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  overflow: scroll;
+  /* flex-wrap: wrap; */
+}
+
+.gallery-image {
+  width: auto;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+  transition: transform 0,3s;
+}
+
+/* Modal (Zoom) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
     @media (max-width: 760px) {
         .product-details{
-            padding: 4em;
+            padding: 2em;
             padding-top: 0;
         }
+
     }
 
   </style>
@@ -76,50 +131,8 @@
     </footer>
 
   <script src="products.js"></script>
-  <script>
-
-    // Get ID from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = parseInt(urlParams.get('id'));
-
-    // Find product
-    const product = products.find(p => p.id === productId);
-
-    if (product) {
-      const container = document.getElementById('productDetails');
-      container.innerHTML = `
-        <h2>${product.name}</h2>
-        <img src="${product.image}" alt="${product.name}">
-        <p>Price: ${product.price}</p>
-        <p>Description: ${product.description}</p>
-
-        <form action="https://formsubmit.co/gamejoint6@gmail.com" method="POST">
-
-          <input type="hidden" name="Product" value="${product.name}">
-          <input type="hidden" name="Price" value="${product.price}">
-          <br>
-          <label>Full Name:</label><br>
-          <input type="text" name="Full Name" required><br>
-          <br>
-          <label>Email Address:</label><br>
-          <input type="email" name="Email" required><br>
-          <br>
-          <label for="contact">Phone contact:</label><br>
-          <input type="tel" placeholder="Phone Number"><br>
-          <br>
-          <label>Order Notes:</label><br>
-          <textarea name="Message" rows="4" required class="place-order"></textarea><br>
-          <br>
-          <button type="submit" class="submit-btn">Submit Order</button>
-        </form>
-      `;
-    } 
-    
-    else {
-      document.getElementById('productDetails').innerText = "Product not found.";
-    }
-  </script>
-    <script src="script.js"></script>
-    <script src="app.js"></script>
+  <script src="product.js"> </script>
+  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

@@ -192,7 +192,7 @@ nav{
 /* drop-down-for-search-bar */
 
 .results-box {
-    margin-top: 14em;
+    margin-top: 15em;
     background: white;
     border: 1px solid #ccc;
     position: absolute;
@@ -208,6 +208,7 @@ nav{
 .result-item {
     padding: 8px;
     border-bottom: 1px solid #eee;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -395,13 +396,14 @@ footer{
 .visual-descriptive-3{
     display: flex;
     align-items: center;
+    width: 100%;
     opacity: 0;
     transform: translateY(40px);
     animation: image 2s linear forwards;
 }
 
 .visual-service{
-    width: 100%;
+    width: 30em;
     height: auto;
 }
 
@@ -409,9 +411,9 @@ footer{
 /* CONTACT DETAILS */
 
 .contact{
-    padding: 2em;
+    padding: 1em;
     background-color: rgba(51, 51, 68, 0.204);
-    margin: 2em;
+    margin: 1em;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -666,6 +668,10 @@ img{
     margin: 8px;
     font-size: 15px;
     color: rgb(255, 253, 253);
+}
+
+.title{
+    font-size: 20px;
 }
 
 /* instant-shop */
