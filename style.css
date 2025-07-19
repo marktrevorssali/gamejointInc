@@ -133,7 +133,7 @@ nav{
 .pre-hero{
     padding-top: 5%;
     text-align: center;
-    background-image: url(images/2.png);
+    background-image: url(images/2.webp);
     background-position: center;
     background-size: cover;
 }
@@ -221,7 +221,7 @@ nav{
 footer{
     width: 100%;
     height: auto;
-    background: url(images/astro-bot-rescue-mission-wallpaper-06-en-us-06jul20.png);
+    background: url(images/astro-bot-rescue-mission-wallpaper-06-en-us-06jul20.webp);
 
 }
 
@@ -347,7 +347,7 @@ footer{
 /* STYLE FOR SERVICES */
 .services{
     margin-top: 0;
-    background-image: url(images/poster-1.jpg);
+    background-image: url(images/poster-1.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -545,7 +545,7 @@ button[type='submit']{
 .pre-hero{
     padding-top: 1px;
     text-align: center;
-    background-image: url(images/2.png);
+    background-image: url(images/2.webp);
     background-position: center;
     background-size: cover;
 }
@@ -650,7 +650,7 @@ img{
     margin-top: 1em;
     padding-top: 0;
     text-align: start;
-    background-image: url(images/poster-1.jpg);
+    background-image: url(images/poster-1.webp);
     background-position: center;
     background-size: cover;
 }
