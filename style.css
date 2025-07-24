@@ -319,8 +319,7 @@ footer{
   overflow-x: scroll;
   gap: 0.5em;
   border-radius: 10px;
-  border-left: rgb(49, 113, 143) solid 2px;
-  border-right: rgb(49, 113, 143) solid 2px;
+
 }
 
 
